@@ -10,8 +10,6 @@ It runs fully locally with Ollama, or with Google Gemini in the cloud. Switch wi
 
 ![Architecture diagram](docs/architecture.png)
 
-The editable source is `docs/architecture.excalidraw` (open it at excalidraw.com).
-
 - Chunks overlap so a sentence that falls on a boundary can still be retrieved.
 - Vectors are normalised, so a dot product is cosine similarity and search is one matrix multiply. That is fine for thousands of chunks.
 - The prompt tells the model to answer only from the numbered context and to cite `[1]`, `[2]`, which keeps hallucinations down.
