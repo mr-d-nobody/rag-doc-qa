@@ -1,0 +1,17 @@
+[
+  {"q": "What are the core working hours?", "page": 1, "answer": "10:00"},
+  {"q": "How is overtime paid?", "page": 1, "answer": "1.5"},
+  {"q": "How many vacation days do employees get per year?", "page": 2, "answer": "22"},
+  {"q": "How long is parental leave for the primary caregiver?", "page": 2, "answer": "16 weeks"},
+  {"q": "How many days per week can I work remotely by default?", "page": 3, "answer": "2 days"},
+  {"q": "How much is the home office stipend?", "page": 3, "answer": "400"},
+  {"q": "What is the maximum hotel cost per night in major cities?", "page": 4, "answer": "180"},
+  {"q": "Within how many days must expense reports be filed?", "page": 4, "answer": "45"},
+  {"q": "How often must passwords be rotated?", "page": 5, "answer": "180"},
+  {"q": "How quickly must a lost device be reported?", "page": 5, "answer": "2 hours"},
+  {"q": "When do performance reviews happen?", "page": 6, "answer": "June"},
+  {"q": "What happens after two consecutive ratings below 2?", "page": 6, "answer": "improvement plan"},
+  {"q": "What is the annual learning budget?", "page": 7, "answer": "1200"},
+  {"q": "What percent of health insurance premiums does the company cover?", "page": 8, "answer": "90"},
+  {"q": "How many counselling sessions are included per year?", "page": 8, "answer": "8"}
+]
