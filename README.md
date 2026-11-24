@@ -8,35 +8,9 @@ It runs fully locally with Ollama, or with Google Gemini in the cloud. Switch wi
 
 ## How it works
 
-```mermaid
-flowchart LR
-  subgraph FE["Frontend: React + Vite"]
-    U["Upload PDFs"]
-    Q["Chat question"]
-    A["Live answer + sources panel"]
-  end
-  subgraph BE["Backend: Django (qa/)"]
-    UP["POST /api/upload"]
-    ASK["POST /api/ask"]
-    ST["NDJSON stream: sources, then tokens"]
-  end
-  subgraph RAG["RAG core: rag.py"]
-    L["load_pdf (pypdf)"] --> C["chunk_text: 800 chars, 150 overlap"] --> E["embed: L2-normalised vectors"] --> VS[("VectorStore: numpy matrix in RAM")]
-    S["search: embed query, cosine top-k"]
-    AN["answer: context + strict prompt"]
-    CS["_chat_stream: yield tokens"]
-  end
-  subgraph LLM["LLM provider (LLM_PROVIDER in .env)"]
-    SW{"Provider switch"} --> OL["Ollama: nomic-embed-text, llama3.2"]
-    SW --> GM["Gemini: gemini-embedding-001, flash-lite"]
-  end
-  U --> UP --> L
-  VS --> S
-  Q --> ASK --> S --> AN --> CS --> ST --> A
-  E <--> SW
-  S <--> SW
-  CS <--> SW
-```
+![Architecture diagram](docs/architecture.png)
+
+The editable source is `docs/architecture.excalidraw` (open it at excalidraw.com).
 
 - Chunks overlap so a sentence that falls on a boundary can still be retrieved.
 - Vectors are normalised, so a dot product is cosine similarity and search is one matrix multiply. That is fine for thousands of chunks.
