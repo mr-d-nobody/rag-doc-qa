@@ -30,7 +30,7 @@ _load_dotenv()
 PROVIDER = os.getenv("LLM_PROVIDER", "ollama").lower()
 if PROVIDER == "gemini":
     EMBED_MODEL = os.getenv("GEMINI_EMBED_MODEL", "gemini-embedding-001")
-    CHAT_MODEL = os.getenv("GEMINI_CHAT_MODEL", "gemini-flash-lite-latest")
+    CHAT_MODEL = os.getenv("GEMINI_CHAT_MODEL", "gemini-3.5-flash-lite")
 else:
     EMBED_MODEL = os.getenv("OLLAMA_EMBED_MODEL", "nomic-embed-text")
     CHAT_MODEL = os.getenv("OLLAMA_CHAT_MODEL", "llama3.2")

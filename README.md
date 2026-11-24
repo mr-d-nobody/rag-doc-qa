@@ -22,7 +22,7 @@ It runs fully locally with Ollama, or with Google Gemini in the cloud. Switch wi
 | Provider | Right page in top 4 | Right page is #1 | Correct answer |
 |---|---|---|---|
 | Ollama (`nomic-embed-text` + `llama3.2`) | 15/15 | 14/15 | 15/15 |
-| Gemini (`gemini-embedding-001` + flash-lite) | 15/15 | n/a | 15/15 |
+| Gemini (`gemini-embedding-001` + `gemini-3.5-flash-lite`) | 15/15 | n/a | 15/15 |
 
 `python eval.py --sweep -k 1` compares chunk sizes. With Ollama, 200-character chunks got every top-1 right, while 400 to 1500 characters missed one question. It's a small synthetic document, so this is a sanity check and not a benchmark.
 
